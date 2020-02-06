@@ -1,4 +1,8 @@
-# BachelorProject
-Bachelor project of Luuk Kaandorp for the study Information Sciences (previously IMM) at the VU Amsterdam. In collaboration with Ivano Malavolta.
+# CPU Factorial Test
+This app tests the CPU energy consumption by computing large factorials.
 
-The goal of the project is to give developers a sense of impact by certain hardware components on the energy consumption of their app.
+## Frequencies
+For this app we used the following frequencies:
+* Low frequency: 1000!
+* Medium frequency: 2000!
+* High frequency: 3000!
