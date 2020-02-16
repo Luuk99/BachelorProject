@@ -13,6 +13,7 @@ val low_frequency: Long = 3000 // 3 seconds
 val medium_frequency: Long = 2000 // 2 seconds
 val high_frequency: Long = 1000 // 1 second
 
+// Runnable variable for repeating the action
 private var runnable: Runnable by Delegates.notNull()
 
 class MainActivity : AppCompatActivity() {
