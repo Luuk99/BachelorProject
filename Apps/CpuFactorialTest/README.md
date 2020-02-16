@@ -12,5 +12,5 @@ For this app we used the following frequencies:
 
 ## Changing the frequency
 You can easily change the frequency by opening the project in Android Studio, go to the MainActivity.kt class look for the sentence 
-``` handler.postDelayed(runnable, low_frequency) ```
-Here you can change the frequency by simply substituting ```low_frequency``` with ```medium_frequency``` or ```high_frequency```
+``` handler.postDelayed(runnable, low_frequency) ```.
+Here you can change the frequency by simply substituting ```low_frequency``` with ```medium_frequency``` or ```high_frequency```.
