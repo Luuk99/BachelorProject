@@ -2,13 +2,18 @@ package e.www.cpufactorialtest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import java.security.Timestamp
+import android.os.Handler
+import kotlin.properties.Delegates
+
+// Constant for the factorial
+val factorial = 78585656
 
 // Constants for the frequencies
-val low_frequency = 1000
-val medium_frequency = 2000
-val high_frequency = 3000
+val low_frequency: Long = 3000 // 3 seconds
+val medium_frequency: Long = 2000 // 2 seconds
+val high_frequency: Long = 1000 // 1 second
+
+private var runnable: Runnable by Delegates.notNull()
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,14 +21,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Log the starting time of the test
-        Log.e("Starting Time", System.currentTimeMillis().toString())
+        // Handler for infinite loop
+        val handler = Handler()
 
-        // Start the factorial calculation
-        factorial(low_frequency)
+        // Runnable which computes the factorial
+        runnable = Runnable {
+            // Compute the factorial
+            factorial(factorial)
 
-        // Log the end time of the test
-        Log.e("End Time", System.currentTimeMillis().toString())
+            handler.postDelayed(runnable, low_frequency)
+        }
+
+        // Start infinite loop
+        handler.post(runnable)
     }
 }
 
