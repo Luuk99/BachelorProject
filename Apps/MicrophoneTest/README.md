@@ -1,4 +1,5 @@
-# BachelorProject
-Bachelor project of Luuk Kaandorp for the study Information Sciences (previously IMM) at the VU Amsterdam. In collaboration with Ivano Malavolta.
+# Microphone Test
+This app tests the microphone energy consumption by recording audio.
 
-The goal of the project is to give developers a sense of impact by certain hardware components on the energy consumption of their app.
+## How does it work?
+Once started, the app starts recording audio from the microphone and only stops when the app is stopped.
