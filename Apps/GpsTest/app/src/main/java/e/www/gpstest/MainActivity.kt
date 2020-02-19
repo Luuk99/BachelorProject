@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
             LocationServices.getFusedLocationProviderClient(this)
 
         // Start the location updates
-        startLocationUpdates(low_frequency, low_priority)
-    }
+startLocationUpdates(low_frequency, low_priority)
+	}
 }
 
 // Starts the location updates
@@ -56,3 +56,10 @@ fun startLocationUpdates(frequency: Long, priority: Int) {
         Log.e("Exception", e.toString())
     }
 }
+
+
+
+
+
+
+
