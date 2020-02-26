@@ -56,21 +56,7 @@ class MainActivity : AppCompatActivity() {
     private fun storeData() {
         val file = File(dir, "Data" + iterations.toString() + ".txt")
         val os = FileOutputStream(file)
-        val data = "sidnoiasdnoisjdoijiodhfodhfuihfuiodshoidhdiofudshfiuhdfiuhd" +
-                "sfhdiojfiodjfiojdfioejdfiohdiofjdiofjiodjfiodjfiojdfiojedfiojdiojfioj" +
-                "dfiojdsfiojdasiofjaoidjfoidjfiojdfiojaiofdjiodajfioadjfiojdiofjsdiojf" +
-                "oiaesjfoijdfiojdiojfdiosjfiojafiojadsiofjoiajdfiojdaoifjiodajfiojdafi" +
-                "ojadiofjiodafjiodjfiojfiojdaiojadsfiojdasfiojdasiofjdiojfioasjfiodjsi" +
-                "odjfiojadfiojiodjfioasdjfioadsjfiojdsfiojdaoijfioadsjfiodasjfioadsjsf" +
-                "iojafiojdiojfdiojfioajfiojadiojaoifjdiojdfiodjafiojdafiojdsasiofjadsi" +
-                "sojfioadsjfioadsjfioajfiodjsidnoiasdnoisjdoijiodhfodhfuihfuiodshoidhd" +
-                "iofudshfiuhdfiuhdsfhdiojfiodjfiojdfioejdfiohdiofjdiofjiodjfiodjfiojdf" +
-                "iojedfiojdiojfiojdfiojdsfiojdasiofjaoidjfoidjfiojdfiojaiofdjiodajfioa" +
-                "djfiojdiofjsdiojfoiaesjfoijdfiojdiojfdiosjfiojafiojadsiofjoiajdfiojda" +
-                "oifjiodajfiojdafiojadiofjiodafjiodjfiojfiojdaiojadsfiojdasfiojdasiofj" +
-                "diojfioasjfiodjsiodjfiojadfiojiodjfioasdjfioadsjfiojdsfiojdaoijfioads" +
-                "jfiodasjfioadsjsfiojafiojdiojfdiojfioajfiojadiojaoifjdiojdfiodjafiojd" +
-                "afiojdsasiofjadsisojfioadsjfioadsjfioajfiodjasjdbsajdbjskabdkjasbdjka"
+        val data = resources.getString(R.string.data)
         os.write(data.toByteArray())
         os.close()
     }

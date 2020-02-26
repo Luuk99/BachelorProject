@@ -1,8 +1,8 @@
 # Write SD Test
-This app tests the energy consumption of writing data to the SD card by writing 1KB periodically.
+This app tests the energy consumption of writing data to the SD card by writing 1MB periodically.
 
 ## How does it work?
-The app writes 1KB of data to the SD card at the specified interval.
+The app writes 1MB of data to the SD card at the specified interval.
 
 ## Frequencies
 For this app we used the following frequencies:

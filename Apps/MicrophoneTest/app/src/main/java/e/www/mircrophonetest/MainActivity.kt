@@ -1,18 +1,21 @@
 package e.www.mircrophonetest
 
+import android.media.AudioFormat
+import android.media.AudioRecord
 import android.media.MediaRecorder
 import android.os.Bundle
-import android.os.Environment
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import java.io.IOException
 
 
 // Audio recorder variables
-private lateinit var audioRecorder: MediaRecorder
+private val RECORDER_SAMPLERATE = 8000
+private val RECORDER_CHANNELS = AudioFormat.CHANNEL_IN_MONO
+private val RECORDER_AUDIO_ENCODING = AudioFormat.ENCODING_PCM_16BIT
+private lateinit var recorder: AudioRecord
 
-// File path for storing recording
-private lateinit var outputFile: String
+// Audio recorder buffer variables
+private val BufferElements2Rec = 1024
+private val BytesPerElement = 2
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,33 +23,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Set the path for saving the recording
-        outputFile = Environment.getExternalStorageDirectory().absolutePath + "/recording.3gp"
+        // Create the recorder
+        recorder = AudioRecord(
+            MediaRecorder.AudioSource.MIC,
+            RECORDER_SAMPLERATE, RECORDER_CHANNELS,
+            RECORDER_AUDIO_ENCODING, BufferElements2Rec * BytesPerElement
+        )
 
-        // Create the media recorder
-        audioRecorder = MediaRecorder()
-        audioRecorder.setAudioSource(MediaRecorder.AudioSource.MIC)
-        audioRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
-        audioRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB)
-        audioRecorder.setOutputFile(outputFile)
-
-        // Start the recorder
-        try {
-            audioRecorder.prepare()
-            audioRecorder.start()
-            Log.e("AudioRecorder", "started")
-        } catch (ise: IllegalStateException) {
-            Log.e("AudioRecorder", ise.toString())
-        }
-        catch (ioe: IOException) {
-            Log.e("AudioRecorder", ioe.toString())
-        }
+        // Start recording
+        recorder.startRecording()
     }
 
     override fun onStop() {
         // Stop the recorder
-        audioRecorder.stop()
-        audioRecorder.release()
+        if (::recorder.isInitialized) {
+            recorder.stop()
+            recorder.release()
+        }
 
         super.onStop()
     }
