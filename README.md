@@ -6,8 +6,13 @@ The goal of the project is to assess the whether Android Runner can accurately m
 
 ## The apps
 * [Accelerometer](/Apps/AccelerometerTest)
+* [Ambient Light Sensor](/Apps/AmbientLightTest)
 * [Camera](/Apps/CameraTest)
 * [CPU Factorial](/Apps/CpuFactorialTest)
 * [GPS](/Apps/GpsTest)
+* [Gravity Sensor](/Apps/GravityTest)
+* [Gyroscope](/Apps/GyroscopeTest)
+* [Local Storage](/Apps/WriteLocalTest)
+* [Magnetic Field Sensor](/Apps/MagneticFieldTest)
 * [Microphone](/Apps/MicrophoneTest)
 * [SD-Card](/Apps/WriteSdTest)
