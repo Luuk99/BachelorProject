@@ -1,4 +1,16 @@
-# BachelorProject
-Bachelor project of Luuk Kaandorp for the study Information Sciences (previously IMM) at the VU Amsterdam. In collaboration with Ivano Malavolta.
+# Camera Test
+This app tests the camera energy consumption by taking pictures.
 
-The goal of the project is to give developers a sense of impact by certain hardware components on the energy consumption of their app.
+## How does it work?
+This app engages a loop which takes a picture on an interval determined by the frequency provided. 
+
+## Frequencies
+For this app we used the following frequencies:
+* Low frequency: 15 seconds
+* Medium frequency: 10 seconds
+* High frequency: 5 seconds
+
+## Changing the frequency
+You can easily change the frequency by opening the project in Android Studio, go to the MainActivity.kt class look for the sentence 
+``` handler.postDelayed(runnable, low_frequency) ```.
+Here you can change the frequency by simply substituting ```low_frequency``` with ```medium_frequency``` or ```high_frequency```.
