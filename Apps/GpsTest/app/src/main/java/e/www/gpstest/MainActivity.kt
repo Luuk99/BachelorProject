@@ -6,14 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.location.*
 
 // Constants for the frequencies
-val low_frequency: Long = 3000 // 3 seconds
-val medium_frequency: Long = 2000 // 2 seconds
-val high_frequency: Long = 1000 // 1 second
+const val low_frequency: Long = 3000 // 3 seconds
+const val medium_frequency: Long = 2000 // 2 seconds
+const val high_frequency: Long = 1000 // 1 second
 
 // Constants for the priority
-val high_priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-val medium_priority = LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY
-val low_priority = LocationRequest.PRIORITY_LOW_POWER
+const val high_priority = LocationRequest.PRIORITY_HIGH_ACCURACY
+const val medium_priority = LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY
+const val low_priority = LocationRequest.PRIORITY_LOW_POWER
 
 // Location variables
 private lateinit var mFusedLocationProviderClient: FusedLocationProviderClient
@@ -30,8 +30,15 @@ class MainActivity : AppCompatActivity() {
             LocationServices.getFusedLocationProviderClient(this)
 
         // Start the location updates
-startLocationUpdates(low_frequency, low_priority)
+        startLocationUpdates(low_frequency, low_priority)
 	}
+
+    override fun onPause() {
+        // Stop location request
+        mFusedLocationProviderClient.removeLocationUpdates(locationCallback)
+
+        super.onPause()
+    }
 }
 
 // Starts the location updates
@@ -56,6 +63,8 @@ fun startLocationUpdates(frequency: Long, priority: Int) {
         Log.e("Exception", e.toString())
     }
 }
+
+
 
 
 

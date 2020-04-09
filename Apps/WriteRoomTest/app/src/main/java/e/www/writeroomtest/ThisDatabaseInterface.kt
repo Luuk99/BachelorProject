@@ -14,6 +14,6 @@ interface ThisDatabaseInterface {
     @Insert
     fun addEntry(entry: ThisDatabaseEntity)
 
-    @Query("DELETE * FROM thisdatabaseentity")
+    @Query("DELETE FROM thisdatabaseentity")
     fun deleteAll()
 }
