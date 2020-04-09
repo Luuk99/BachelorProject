@@ -18,3 +18,4 @@ The goal of the project is to assess the whether Android Runner can accurately m
 * [Microphone](/Apps/MicrophoneTest)
 * [Room Database](/Apps/WriteRoomTest)
 * [SD-Card](/Apps/WriteSdTest)
+* [Speaker](/Apps/SpeakerTest)
