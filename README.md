@@ -10,6 +10,7 @@ The goal of the project is to assess the whether Android Runner can accurately m
 * [Ambient Light Sensor](/Apps/AmbientLightTest)
 * [Camera](/Apps/CameraTest)
 * [CPU Factorial](/Apps/CpuFactorialTest)
+* [Display](/Apps/DisplayTest)
 * [GPS](/Apps/GpsTest)
 * [Gravity Sensor](/Apps/GravityTest)
 * [Gyroscope](/Apps/GyroscopeTest)
