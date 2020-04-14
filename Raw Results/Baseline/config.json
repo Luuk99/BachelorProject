@@ -23,5 +23,5 @@
     "after_run": "Scripts/after_run.py",
     "after_experiment": "Scripts/after_experiment.py"
   },
-  "time_between_run": 60000
+  "time_between_run": 120000
 }
