@@ -27,8 +27,8 @@ Before reproduction, the experiments can only be conducted on linux distribution
 * Install Android Studio: this can be done from the Ubuntu Software program or from the [official website](https://developer.android.com/studio/install).
 * Install Android Runner: this can be done by following the steps provided on the [official github page](https://github.com/S2-group/android-runner).
 * Get the power_profile.xml from your phone:
-  1 Open Android Studio. Head to the Device File Explorer tab in the bottom right of your screen. Navigate to the sytem folder -> framework folder -> Grab the framework-res.apk and copy it to your PC.
-  2 Install APKTool: this can be done by following the steps provided on the [official website](https://ibotpeaches.github.io/Apktool/install/).
-  3 OPTIONAL: if the apktool does not work in itself, try running `java -jar /usr/local/bin/apktool.jar` instead of `apktool`.
-  4 Decode the framework-res.apk file: this can be done by navigating to the directory containing this file inside a terminal. Then execute `java -jar /usr/local/bin/apktool.jar d framework-res.apk`.
-  5 Find power_profile.xml: the previous step should have created a framework-res folder in your directory. Find and copy power_profile.xml to the `android-runner/examples/batterystats/Scripts` folder.
+..1. Open Android Studio. Head to the Device File Explorer tab in the bottom right of your screen. Navigate to the sytem folder -> framework folder -> Grab the framework-res.apk and copy it to your PC.
+..2. Install APKTool: this can be done by following the steps provided on the [official website](https://ibotpeaches.github.io/Apktool/install/).
+..3. OPTIONAL: if the apktool does not work in itself, try running `java -jar /usr/local/bin/apktool.jar` instead of `apktool`.
+..4. Decode the framework-res.apk file: this can be done by navigating to the directory containing this file inside a terminal. Then execute `java -jar /usr/local/bin/apktool.jar d framework-res.apk`.
+..5. Find power_profile.xml: the previous step should have created a framework-res folder in your directory. Find and copy power_profile.xml to the `android-runner/examples/batterystats/Scripts` folder.
