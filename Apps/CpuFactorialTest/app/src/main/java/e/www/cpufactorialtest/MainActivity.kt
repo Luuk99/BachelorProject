@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             // Compute the factorial
             factorial()
 
-            handler.postDelayed(runnable, medium_frequency)
+            handler.postDelayed(runnable, high_frequency)
         }
 
         // Start infinite loop
