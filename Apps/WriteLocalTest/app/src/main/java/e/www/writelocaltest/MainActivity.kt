@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             // Increase the iterations variable
             iterations += 1
 
-            handler.postDelayed(runnable, low_frequency)
+            handler.postDelayed(runnable, high_frequency)
         }
 
         // Start infinite loop
