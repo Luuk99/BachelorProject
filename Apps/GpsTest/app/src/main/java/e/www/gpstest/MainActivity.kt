@@ -3,7 +3,9 @@ package e.www.gpstest
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.*
+import java.util.jar.Manifest
 
 // Constants for the frequencies
 const val low_frequency: Long = 3000 // 3 seconds
@@ -25,12 +27,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // DEBUG
+        ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), 0)
+
         // Create a location provider client
         mFusedLocationProviderClient =
             LocationServices.getFusedLocationProviderClient(this)
 
         // Start the location updates
-        startLocationUpdates(low_frequency, low_priority)
+        startLocationUpdates(high_frequency, high_priority)
 	}
 
     override fun onPause() {
