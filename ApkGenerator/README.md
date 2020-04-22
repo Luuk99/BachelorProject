@@ -1,9 +1,10 @@
 # APK Generator
 APK Generator is a Python framework that facilitates the execution of experiments involving multiple variations of native Android apps. This framework will allow users to automatically create different versions of their native apps with simple Python code. Note that this framework only runs on Linux distributions using Python3. 
 
-# How it works
+## How it works
 The APK Generator consists of 2 parts: `apk_generator.py` and `config.py`. The first, handles all the hard work where it opens all the files in your Android project's Java folder and hands them to the `config.py`. The `config.py` implements 2 functions: `update_file`, which updates an entire Java/Kotlin file, and `update_loc` which updates individual lines of codes passed down from the `apk_generator.py`.
 
+### update_file
 The `update_file` function of `config.py` looks the following:
 ```python
 def update_file(file, run):
@@ -13,9 +14,11 @@ def update_file(file, run):
 It receives the following objects:
 1. **file**: this is a Java/Kotlin file opened using `open()`.
 2. **run**: this is the number of the run. Do keep in mind that this ranges from 0 to (number of runs - 1). This is explicitly done to facilitate the easy use of indexing over lists.
+
 What it should return:
 * The function should return a file object representing the entire Kotlin/Java file.
 
+### update_loc
 The `update_loc` function of `config.py` looks the following:
 ```python
 def update_loc(line, run):
@@ -25,6 +28,7 @@ def update_loc(line, run):
 It receives the following objects:
 1. **line**: this is a specific line in a Kotlin/Java file.
 2. **run**: this is the number of the run. Do keep in mind that this ranges from 0 to (number of runs - 1). This is explicitly done to facilitate the easy use of indexing over lists.
+
 What it should return:
 * The function should return a string object representing the a of code.
 
