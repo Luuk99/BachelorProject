@@ -19,15 +19,15 @@ The `update_file` function of `config.py` looks the following:
 ```python
 def update_file(file_name, file, run):
    # Add your code here
-   return file
+   return False
 ```
 It receives the following objects:
 1. **file_name**: this is the name of the Java/Kotlin file.
-2. **file**: this is a Java/Kotlin file opened using `open()`.
+2. **file**: this is the path to the Java/Kotlin file.
 3. **run**: this is the number of the run. Do keep in mind that this ranges from 0 to (number of runs - 1). This is explicitly done to facilitate the easy use of indexing over lists.
 
 What it should return:
-* The function should return a file object representing the entire Kotlin/Java file.
+* The function should return a Boolean, whether or not the file has been changed. If False is returned, `update_loc` will not be called for the individual lines.
 
 ### update_loc
 The `update_loc` function of `config.py` looks the following:
