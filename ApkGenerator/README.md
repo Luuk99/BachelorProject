@@ -51,3 +51,25 @@ You should only make changes to the `config.py` and leave the `apk_generator.py`
 * OPTIONAL: When you have specified to keep the temporary files, you can find the different versions of the Android project folder in the Temp folder.
 
 ## Examples
+This section contains simple examples of applications for this framework.
+
+### update_file
+The following application of the `update_file` function would look for the sentence "Hello World" and replace this with "Hello there". Notice that this does in fact do the exact same as the example of the `update_loc` function below but the `update_file` function would allow for greater flexibility in the implementation.
+```python
+def update_file(file_name, file, run):
+   for line in fileinput.input(file, inplace=True):
+      if line == "Hello World":
+         sys.stdout.write("Hello there")
+      else:
+         sys.stdout.write(line)
+   return True
+```
+### update_loc
+This application of `update_loc` does the same as the example above but removes the heavy lifting for you so you can easily modify a line of code.
+```python
+def update_loc(file_name, line, run):
+   if line == "Hello World":
+      return "Hello there"
+   return line
+```
+
