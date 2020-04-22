@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
 # Function that updates the given file
-def update_file(file, run):
+def update_file(file_name, file, run):
    # Add your code here
-   return file
+   return False
 
 # Function that updates the given line of code
-def update_loc(line, run):
+def update_loc(file_name, line, run):
    # Add your code here
    return line
 
