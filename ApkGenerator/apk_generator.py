@@ -64,7 +64,7 @@ def start_process(android_folder_name, number_of_runs, current_path, keep_temp):
                sys.stdout.write(config.update_loc(filename, line, run))
          print(filename + " updated")
          # Build the APK
-         build_apk(android_folder_name, run, current_path)
+         build_apk(run_folder, run, current_path)
    # Check to clear the Temp folder
    if not keep_temp:
       print("Removing Temp")
