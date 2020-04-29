@@ -84,7 +84,6 @@ private val mccsStateCallback: CameraCaptureSession.StateCallback =
                                 request: CaptureRequest,
                                 result: TotalCaptureResult
                             ) {
-                                Log.e("Capture", "Completed")
                                 super.onCaptureCompleted(session, request, result)
                             }
                         }, null)
