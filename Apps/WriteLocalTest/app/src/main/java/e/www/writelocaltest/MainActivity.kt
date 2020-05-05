@@ -1,8 +1,10 @@
 package e.www.writelocaltest
 
+import android.Manifest
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.core.app.ActivityCompat
 import java.io.File
 import java.io.FileOutputStream
 import kotlin.properties.Delegates
@@ -54,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             // Increase the iterations variable
             iterations += 1
 
-            handler.postDelayed(runnable, high_frequency)
+            handler.postDelayed(runnable, low_frequency)
         }
 
         // Start infinite loop

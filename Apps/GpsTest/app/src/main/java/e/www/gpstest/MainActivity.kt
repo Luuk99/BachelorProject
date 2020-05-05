@@ -27,9 +27,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Ask permission
-        ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), 0)
-
         // Create a location provider client
         mFusedLocationProviderClient =
             LocationServices.getFusedLocationProviderClient(this)

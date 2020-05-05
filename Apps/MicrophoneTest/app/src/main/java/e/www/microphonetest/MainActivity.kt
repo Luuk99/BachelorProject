@@ -1,11 +1,15 @@
 package e.www.microphonetest
 
-import android.media.*
+import android.Manifest
+import android.content.pm.PackageManager
+import android.media.MediaRecorder
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import java.io.File
 import java.io.IOException
 
@@ -19,11 +23,24 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Ask permission
-        ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.RECORD_AUDIO, android.Manifest.permission.WRITE_EXTERNAL_STORAGE), 200)
+        // Check permissions
+        checkPermissions()
+    }
 
+    private fun checkPermissions() {
+      if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) ==
+                      PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this,
+                      Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+          startRecording()
+      }
+      else {
+          checkPermissions()
+      }
+    }
+
+    private fun startRecording() {
         // Create audioFile
-        audioFile = Environment.getExternalStorageDirectory().path + File.separator + Environment.DIRECTORY_DCIM + File.separator + "testaudio.3gp"
+        audioFile = getExternalFilesDir(Environment.DIRECTORY_DCIM)?.absolutePath + File.separator + "testaudio.3gp"
 
         // Create the recorder
         recorder = MediaRecorder().apply {

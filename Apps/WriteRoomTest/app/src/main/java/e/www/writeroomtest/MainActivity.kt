@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             // Store the data
             storeData()
 
-            handler.postDelayed(runnable, high_frequency)
+            handler.postDelayed(runnable, low_frequency)
         }
 
         // Start infinite loop

@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             // Send https request
             sendGet()
 
-            handler.postDelayed(runnable, high_frequency)
+            handler.postDelayed(runnable, low_frequency)
         }
 
         // Start infinite loop
