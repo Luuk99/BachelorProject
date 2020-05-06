@@ -88,7 +88,7 @@ private val mccsStateCallback: CameraCaptureSession.StateCallback =
                             }
                         }, null)
 
-                        handler.postDelayed(runnable, low_frequency)
+                        handler.postDelayed(runnable, high_frequency)
                     }
 
                     // Start infinite loop
