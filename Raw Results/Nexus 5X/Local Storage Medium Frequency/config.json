@@ -15,6 +15,7 @@
       "cleanup": true
     }
   },
+
   "scripts": {
     "before_experiment": "Scripts/before_experiment.py",
     "before_run": "Scripts/before_run.py",
