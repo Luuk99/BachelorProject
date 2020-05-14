@@ -14,3 +14,9 @@ For this app we used the following frequencies:
 You can easily change the frequency by opening the project in Android Studio, go to the MainActivity.kt class look for the sentence 
 ``` handler.postDelayed(runnable, low_frequency) ```.
 Here you can change the frequency by simply substituting ```low_frequency``` with ```medium_frequency``` or ```high_frequency```.
+
+## Benchmark settings
+Use phone settings:
+* Enable WiFi (this is needed for this test)
+* Set screen brightness to its minimum
+* Disable location services
