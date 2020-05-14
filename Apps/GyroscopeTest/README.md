@@ -3,3 +3,9 @@ This app tests the gyroscope energy consumption by creating a listener that list
 
 ## How does it work?
 The app creates a sensor listener for the gyroscope which listens for changes in the sensor.
+
+## Benchmark settings
+Use phone settings:
+* Disable WiFi
+* Set screen brightness to its minimum
+* Enable location services (this is needed to use the gyroscope)
