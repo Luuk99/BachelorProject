@@ -25,3 +25,9 @@ Here you can change the frequency by simply substituting ```low_frequency``` wit
 You can easily change the priority by opening the project in Android Studio, go to the MainActivity.kt class and look for the sentence
 ```startLocationUpdates(low_frequency, low_priority) ```.
 Here you can change the frequency by simply substituting ```low_priority``` with ```medium_priority``` or ```high_priority```.
+
+## Benchmark settings
+Use phone settings:
+* Disable WiFi
+* Set screen brightness to its minimum
+* Enable location services (this is needed to use the GPS)
