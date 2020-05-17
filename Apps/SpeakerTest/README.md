@@ -10,3 +10,6 @@ Use phone settings:
 * Set screen brightness to its minimum
 * Disable location services
 * Set phone's media volume to 50% (this is needed for this test)
+
+Use config.json settings:
+* `enable_systrace_parsing` set to True
