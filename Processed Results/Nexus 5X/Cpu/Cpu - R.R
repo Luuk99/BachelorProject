@@ -10,5 +10,5 @@ p <- data %>% ggplot(aes(x=Frequency, y =Joule))  +
   geom_violin() + 
   geom_boxplot(width=0.1)
 
-p + ggtitle("Cpu factorial") +
+p + ggtitle("CPU") +
   ylab("Energy in Joule") + xlab("Frequency")
