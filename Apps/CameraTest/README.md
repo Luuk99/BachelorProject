@@ -20,3 +20,6 @@ Use phone settings:
 * Disable WiFi
 * Set screen brightness to its minimum
 * Disable location services
+
+Use config.json settings:
+* `enable_systrace_parsing` set to False
