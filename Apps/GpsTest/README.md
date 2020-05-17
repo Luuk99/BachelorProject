@@ -31,3 +31,6 @@ Use phone settings:
 * Disable WiFi
 * Set screen brightness to its minimum
 * Enable location services (this is needed to use the GPS)
+
+Use config.json settings:
+* `enable_systrace_parsing` set to True
