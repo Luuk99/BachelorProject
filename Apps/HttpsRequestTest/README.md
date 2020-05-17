@@ -20,3 +20,6 @@ Use phone settings:
 * Enable WiFi (this is needed for this test)
 * Set screen brightness to its minimum
 * Disable location services
+
+Use config.json settings:
+* `enable_systrace_parsing` set to True
