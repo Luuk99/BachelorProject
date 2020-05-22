@@ -7,7 +7,7 @@ This app plays a .mp4 video file in landscape mode to use most of the display re
 ## Benchmark settings
 Use phone settings:
 * Disable WiFi
-* Set screen brightness to its maximum (important for this test)
+* Set screen brightness to its minimum
 * Disable location services
 
 Use config.json settings:
