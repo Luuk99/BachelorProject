@@ -1,8 +1,8 @@
 # HTTPS Request Test
-This app tests the networking energy consumption by sending HTTPS GET requests.
+This app tests the networking energy consumption by sending HTTP GET requests.
 
 ## How does it work?
-This app engages a loop which sends a HTTPS GET request to Google on an interval determined by the frequency provided. 
+This app engages a loop which sends a HTTP GET request to Google on an interval determined by the frequency provided. 
 
 ## Frequencies
 For this app we used the following frequencies:

@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             LocationServices.getFusedLocationProviderClient(this)
 
         // Start the location updates
-        startLocationUpdates(high_frequency, high_priority)
+        startLocationUpdates(low_frequency, low_priority)
 	}
 
     override fun onPause() {
