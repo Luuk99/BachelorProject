@@ -38,7 +38,7 @@ def build_apk(android_folder_name, run, current_path):
    apk_process.wait()
    print("APK built")
    # Rename the apk
-   os.rename(r"" + android_folder_name + "/app/build/outputs/apk/debug/app-debug.apk", r"" + current_path + "Outputs/" + android_folder_name.split('/')[-1] + "_" + str(run) + ".apk")
+   os.rename(r"" + android_folder_name + "/app/build/outputs/apk/debug/app-debug.apk", r"" + current_path + "Outputs/" + android_folder_name.split('/')[-1] + ".apk")
    print("APK renamed and moved")
 
 # Function that starts the process
