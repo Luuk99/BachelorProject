@@ -73,3 +73,12 @@ def update_loc(file_name, line, run):
    return line
 ```
 
+## Starting point
+The examples in the above section provide a good idea of what Apk Generator can do, but it does not provide the best code to go about your own implementation. The below code section provides a good starting point for your implementation of `update_loc`. This code searches for the line `frequency = low` and creates three variations for low, medium, and high frequency.
+```python
+def update_loc(file_name, line, run):
+   lines = ["low", "medium", "high"]
+   if (line.strip() == "frequency = low"):
+      return line.replace("low", lines[run])
+   return line
+```
