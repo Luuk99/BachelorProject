@@ -4,6 +4,9 @@ Bachelor project of Luuk Kaandorp for the study Information Sciences (previously
 ## The goal
 The goal of the project is to assess the whether Android Runner can accurately measure energy consumption. We do this by creating synthetic apps which test hardware components of the phone. We then measure this using Android Runner and compare this to our base test results which where measured directly from the phone's hardware.
 
+## The paper
+The paper can be found in the [Paper](/Paper) folder of this repository.
+
 ## The apps
 * [Baseline](/Apps/Baseline)
 * [Accelerometer](/Apps/AccelerometerTest)
